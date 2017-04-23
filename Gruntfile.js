@@ -24,24 +24,24 @@ imagemin: {
 },
 watch: { 
 	scripts: { 
-		files: ['sass/*.sass'], 
+		files: ['*.sass'], 
 		tasks: ['sass'], 
 		options: { 
 			spawn: false, 
-		}, 
+		} 
 	} 
 },
 browserSync: {
 	dev: {
 		bsFiles: {
 			src : [
-			'app/css/*.css',
-			'app/*.html'
+			'*.css',
+			'*.html'
 			]
 		},
 		options: {
 			watchTask: true,
-			server: './app'
+			server: './'
 		}
 	}
 }
@@ -55,5 +55,5 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
 
 // Default task(s). 
-grunt.registerTask('default', ['browserSync', 'watch', 'sass', 'imagemin']); 
+grunt.registerTask(['default', 'browserSync', 'watch', 'sass', 'imagemin']); 
 };
