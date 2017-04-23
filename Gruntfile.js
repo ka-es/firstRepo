@@ -30,6 +30,20 @@ watch: {
 			spawn: false, 
 		}, 
 	} 
+},
+browserSync: {
+	dev: {
+		bsFiles: {
+			src : [
+			'app/css/*.css',
+			'app/*.html'
+			]
+		},
+		options: {
+			watchTask: true,
+			server: './app'
+		}
+	}
 }
 
 }); 
@@ -38,7 +52,8 @@ watch: {
 grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-browser-sync');
 
 // Default task(s). 
-grunt.registerTask('default', ['sass', 'imagemin']); 
+grunt.registerTask('default', ['browserSync', 'watch', 'sass', 'imagemin']); 
 };
