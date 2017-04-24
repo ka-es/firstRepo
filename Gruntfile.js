@@ -8,7 +8,7 @@ sass: {
 	}, 
 	dist: { 
 		files: { 
-			'flexbox.css': 'flexbox.sass' 
+			'css/flexbox.css': 'sass/flexbox.sass' 
 		} 
 	} 
 },
@@ -24,7 +24,7 @@ imagemin: {
 },
 watch: { 
 	scripts: { 
-		files: ['*.sass'], 
+		files: ['sass/*.sass'], 
 		tasks: ['sass'], 
 		options: { 
 			spawn: false, 
@@ -35,7 +35,7 @@ browserSync: {
 	dev: {
 		bsFiles: {
 			src : [
-			'*.css',
+			'css/*.css',
 			'*.html'
 			]
 		},
