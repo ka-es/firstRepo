@@ -55,5 +55,5 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
 
 // Default task(s). 
-grunt.registerTask(['default', 'browserSync', 'watch', 'sass', 'imagemin']); 
+grunt.registerTask('default', ['browserSync', 'watch', 'sass', 'imagemin']); 
 };
